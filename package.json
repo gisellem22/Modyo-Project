@@ -1,0 +1,19 @@
+{
+  "name": "modyo-project",
+  "version": "1.0.0",
+  "description": "A frontend project to Modyo",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "eslint": "eslint --ext .js src/ test/",
+    "htmlhint": "htmlhint src/*.html",
+    "pretest": "npm run eslint && npm run htmlhint",
+    "deploy": "gh-pages -d src/"
+  },
+  "keywords": [
+    "javascript",
+    "landing"
+  ],
+  "author": "Giselle Machado",
+  "license": "ISC"
+}

@@ -2,7 +2,7 @@
   "name": "modyo-project",
   "version": "1.0.0",
   "description": "A frontend project to Modyo",
-  "main": "index.js",
+  "main": "src/index.html",
   "scripts": {
     "test": "jest --coverage",
     "eslint": "eslint --ext .js src/ test/",
@@ -10,10 +10,27 @@
     "pretest": "npm run eslint && npm run htmlhint",
     "deploy": "gh-pages -d src/"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gisellem22/Modyo-Project.git"
+  },
   "keywords": [
     "javascript",
     "landing"
   ],
   "author": "Giselle Machado",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-transform-modules-commonjs": "^7.4.4",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^24.8.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-jest": "^22.6.4",
+    "express": "^4.17.1",
+    "gh-pages": "^2.0.1",
+    "htmlhint": "^0.11.0",
+    "jest": "^24.8.0",
+    "save": "^2.4.0"
+  }
 }

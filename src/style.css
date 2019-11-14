@@ -56,10 +56,11 @@
 #features, #about, #testimonials, #contact {
     padding-top: 50px;
 }
-#cards, #about-background, #contact-background {
-    margin: 30px;
+#features, #about, #contact {
     background-color:#f0f3f5;
-    border-radius: 2px;
+}
+#prototypes {
+    background-color:#ffffff;
 }
 .icon-card {
     background-color:#40DDC7;

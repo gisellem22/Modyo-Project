@@ -5,9 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Landerz.</title>
+     <!-- Slick -->
+     <link rel="stylesheet" type="text/css" href=" https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css"/>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>Landerz.</title>
+    <!-- Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -20,22 +26,22 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
+                    <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                         <a class="nav-link" href="#home">Home</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                         <a class="nav-link" href="#features">Features</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                         <a class="nav-link" href="#about">About Us</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                         <a class="nav-link" href="#testimonials">Testimonials</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                         <a class="nav-link" href="#blog">Blog</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
@@ -159,14 +165,79 @@
 </section>
 <!-- Testimonials -->
 <section id="testimonials">
-        <div class="container">
+        <div id="slides" class="container">
                 <h2 class="text-center">Testimonials</h2>
+                <div class="carousel m-5">
+                        <div class="card">
+                            <div class="row justify-content-center">
+                                    <img class="card-img-top" src="./assets/img/person_3.jpg" alt="person_2">
+                            </div>
+                                <div class="card-body">
+                                  <p class="card-text text-center">"Lorem ipsum dolor sit amet consectetur adipiscing elit pulvinar rhoncus non scelerisque faucibus, ante vivamus torquent ultricies eget at nam sociosqu nibh sem proin, tristique eros malesuada potenti augue cum senectus euismod lectus viverra per. Sodales gravida odio platea felis mus ligula, sollicitudin elementum mi nostra neque, vulputate tincidunt metus ad pellentesque."</p>
+                               <h6 class="text-center">John Smith</h6>
+                                </div>
+                        </div>
+                        <div class="card">
+                                <div class="row justify-content-center">
+                                        <img class="card-img-top" src="./assets/img/person_2.jpg" alt="person_2">
+                                </div>
+                                    <div class="card-body">
+                                      <p class="card-text text-center">"Lorem ipsum dolor sit amet consectetur adipiscing elit pulvinar rhoncus non scelerisque faucibus, ante vivamus torquent ultricies eget at nam sociosqu nibh sem proin, tristique eros malesuada potenti augue cum senectus euismod lectus viverra per. Sodales gravida odio platea felis mus ligula, sollicitudin elementum mi nostra neque, vulputate tincidunt metus ad pellentesque."</p>
+                                   <h6 class="text-center">John Smith</h6>
+                                    </div>
+                            </div>
+                            <div class="card">
+                                    <div class="row justify-content-center">
+                                            <img class="card-img-top" src="./assets/img/person_4.jpg" alt="person_2">
+                                    </div>
+                                        <div class="card-body">
+                                          <p class="card-text text-center">"Lorem ipsum dolor sit amet consectetur adipiscing elit pulvinar rhoncus non scelerisque faucibus, ante vivamus torquent ultricies eget at nam sociosqu nibh sem proin, tristique eros malesuada potenti augue cum senectus euismod lectus viverra per. Sodales gravida odio platea felis mus ligula, sollicitudin elementum mi nostra neque, vulputate tincidunt metus ad pellentesque."</p>
+                                       <h6 class="text-center">John Smith</h6>
+                                        </div>
+                                </div>
+                </div>
         </div>
-    </section>
+</section>
+<section id="contact">
+    <div class="container">
+            <h2 class="text-center pb-4">Get In Touch</h2>
+            <form>
+                <h5 class="pb-4">Contact Form</h5>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="inputFirstName">First Name</label>
+                        <input type="text" class="form-control" id="inputFirstName">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="inputLastName">Last Name</label>
+                        <input type="text" class="form-control" id="inputLastName">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputEmail">Email</label>
+                      <input type="email" class="form-control" id="inputEmail">
+                    </div>
+                    <div class="form-group">
+                      <label for="inputSubject">Subject</label>
+                      <input type="text" class="form-control" id="inputSubject">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputMessage">Message</label>
+                        <textarea id="inputMessage" class="form-control"></textarea>                          </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                  </form>
+
+    </div>
+</section>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"crossorigin="anonymous"></script>
-    <script type="module" src="./app.js"></script>
+    <!-- Slick -->
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./app.js"></script>
+    <script src="./slick-carousel.js"></script>
+
 </body>
 
 </html>
